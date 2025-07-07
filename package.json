@@ -1,0 +1,74 @@
+{
+  "name": "sistem-perizinan-acara-verifikasi",
+  "version": "1.0.0",
+  "description": "Event Permission Verification System with GraphQL API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "tsx watch server.js",
+    "migrate": "tsx src/db/migrate.js",
+    "seed": "tsx src/db/seeds.js",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "lint": "eslint src/ --ext .js",
+    "lint:fix": "eslint src/ --ext .js --fix",
+    "format": "prettier --write \"src/**/*.js\" \"*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\" \"*.js\"",
+    "quality": "npm run lint && npm run format:check",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "express",
+    "drizzle",
+    "mysql"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/datasource-rest": "^6.4.1",
+    "@apollo/server": "^4.12.2",
+    "@graphql-tools/merge": "^9.0.24",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "drizzle-graphql": "^0.8.5",
+    "drizzle-orm": "^0.44.2",
+    "drizzle-seed": "^0.3.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "express-validator": "^7.2.1",
+    "graphql": "^16.11.0",
+    "graphql-tag": "^2.12.6",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.4",
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run quality"
+    }
+  }
+}
