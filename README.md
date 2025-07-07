@@ -57,11 +57,10 @@ sistem-perizinan-acara-verifikasi/
 ├── server.js                     # Entry point server
 ├── drizzle.config.js            # Konfigurasi Drizzle
 ├── package.json                 # Dependencies
-├── .env.example                 # Template environment
 └── README.md                    # Dokumentasi utama
 ```
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. **Instalasi Dependencies**
 ```bash
@@ -97,7 +96,7 @@ npm start
 ### 5. **Akses API**
 Buka browser: `http://localhost:4000/graphql`
 
-## 🔐 Autentikasi
+## Autentikasi
 
 Sistem menggunakan JWT (JSON Web Token) untuk autentikasi:
 
@@ -112,7 +111,7 @@ Sistem menggunakan JWT (JSON Web Token) untuk autentikasi:
 - **OPERATOR**: Dapat membuat, edit, dan hapus izin acara milik sendiri
 - **VERIFIKATOR**: Dapat memverifikasi izin acara yang diajukan operator
 
-## 🧪 Testing
+## Testing
 
 ### Contoh Query Testing
 ```graphql
@@ -174,56 +173,13 @@ npm run lint:fix        # Fix ESLint errors otomatis
 npm run format          # Format code dengan Prettier
 npm run format:check    # Check format code
 npm run quality         # Jalankan lint + format check
-```
 
-## 🔒 Keamanan
-
-### Fitur Keamanan
-- ✅ JWT token untuk autentikasi
-- ✅ Role-based access control (RBAC)
-- ✅ Rate limiting (100 req/15min general, 5 req/15min login)
-- ✅ Input validation & sanitization
-- ✅ SQL injection protection (Drizzle ORM)
-- ✅ Security headers (CSP, HSTS, dll)
-- ✅ Password hashing (bcryptjs)
-- ✅ Request logging & monitoring
-
-### Environment Security
-```env
 # Gunakan secret yang kuat untuk production
 JWT_SECRET=kunci-rahasia-jwt-yang-sangat-kuat-dan-acak-minimal-32-karakter
 
 # Gunakan HTTPS di production
 FRONTEND_URL=https://yourdomain.com
 ```
-
-## ⚡ Performance
-
-### Optimasi Database
-- ✅ Connection pooling MySQL
-- ✅ Database indexing untuk query cepat
-- ✅ Query optimization dengan Drizzle
-- ✅ Pagination untuk large datasets
-
-### Optimasi GraphQL
-- ✅ Apollo Server caching
-- ✅ Query complexity analysis
-- ✅ DataLoader untuk batch operations
-- ✅ Response compression
-
-### Monitoring
-- ✅ Request duration logging
-- ✅ Memory usage monitoring
-- ✅ Slow query detection
-- ✅ Error rate tracking
-
-## 🎨 Code Quality
-
-### Linting & Formatting
-- **ESLint**: Static analysis untuk detect issues
-- **Prettier**: Code formatting yang konsisten
-- **Husky**: Git hooks untuk quality checks
-- **Lint-staged**: Run linters pada staged files
 
 ### Git Hooks
 ```bash
