@@ -1,8 +1,8 @@
-# 📋 Sistem Perizinan Acara & Verifikasi
+# Sistem Perizinan Acara & Verifikasi
 
 Sistem manajemen perizinan acara dengan GraphQL API dan sistem verifikasi berbasis role.
 
-## 🚀 Overview Project
+## Overview Project
 
 Sistem ini memungkinkan **Operator** untuk mengajukan izin penyelenggaraan acara dan **Verifikator** untuk memverifikasi pengajuan tersebut. Dibangun dengan teknologi modern untuk performa dan keamanan yang optimal.
 
